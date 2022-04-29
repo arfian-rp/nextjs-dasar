@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <h1>Welcome Arfian</h1>
+      <h1 className="title">Welcome Arfian</h1>
     </>
   );
 };

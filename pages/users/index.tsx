@@ -1,7 +1,9 @@
-export default () => {
+import React from "react";
+
+export default function index() {
   return (
     <div>
-      <p>users</p>
+      <p>user</p>
     </div>
   );
-};
+}
