@@ -1,13 +1,9 @@
-import type { NextPage } from "next";
-import Header from "../components/Header";
+import React from "react";
 
-const Home: NextPage = () => {
+export default function index() {
   return (
-    <>
-      <Header />
+    <div>
       <h1 className="title">Welcome Arfian</h1>
-    </>
+    </div>
   );
-};
-
-export default Home;
+}

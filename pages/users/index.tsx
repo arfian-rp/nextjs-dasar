@@ -3,7 +3,7 @@ import React from "react";
 export default function index() {
   return (
     <div>
-      <p>user</p>
+      <h1>user</h1>
     </div>
   );
 }

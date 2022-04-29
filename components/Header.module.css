@@ -1,0 +1,22 @@
+.header {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 1rem 0 1rem 0;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.item {
+  text-decoration: none;
+  margin: 0 2rem 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 300 ease-in-out;
+}
+.item:hover {
+  color: aqua;
+}
