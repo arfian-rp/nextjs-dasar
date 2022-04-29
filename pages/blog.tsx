@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../Components/Layouts";
 import styles from "../styles/Blog.module.css";
 
 export default function blog() {
   return (
-    <div>
+    <Layout>
       <h1 className={styles["title-blog"]}>blog</h1>
-    </div>
+    </Layout>
   );
 }
