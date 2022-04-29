@@ -2,4 +2,10 @@
   margin: 1rem;
   border: 1px solid black;
   padding: 0.5rem;
+  cursor: pointer;
+  transition: 300 ease-in-out;
+}
+.item:hover {
+  background-color: aqua;
+  color: white;
 }
