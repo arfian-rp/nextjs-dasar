@@ -6,7 +6,7 @@ import styles from "./Users.module.css";
 interface Props {
   dataUsers: [];
 }
-export default function index({ dataUsers }: Props) {
+export default function Index({ dataUsers }: Props) {
   const router = useRouter();
   return (
     <Layout pageTitle="Users">
