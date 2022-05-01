@@ -40,7 +40,9 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: false, //kalau false otomatis redirect ke 404 kalau data tidaka ada
+    fallback: true, //kalau false otomatis redirect ke 404 kalau data tidaka ada
+    // getStaticProps runs in the background when using fallback: true
+    // getStaticProps is called before initial render when using fallback: blocking
   };
 }
 
@@ -53,9 +55,14 @@ export async function getStaticProps(context: Gsp) {
   const { id } = context.params;
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   const dataUser = await res.json();
+  console.info("something");
   return {
     props: {
       dataUser,
     },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    // revalidate: 2, // In seconds
   };
 }
