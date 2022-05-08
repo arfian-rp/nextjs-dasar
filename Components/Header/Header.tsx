@@ -21,6 +21,11 @@ export default function Header() {
             <div className={styles.item}>Users</div>
           </Link>
         </li>
+        <li>
+          <Link href="/login">
+            <div className={styles.item}>Login</div>
+          </Link>
+        </li>
       </ul>
     </header>
   );
