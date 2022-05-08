@@ -2,9 +2,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
-  name: string;
+  method: string;
+  data?: {};
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  res.status(200).json({ name: "John Doe" });
+  switch (req.method) {
+    case "GET":
+      res.status(200).json({ method: "get" });
+      break;
+    case "POST":
+      res.status(200).json({ method: "post", data: req.body });
+      break;
+  }
 }
